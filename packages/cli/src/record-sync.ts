@@ -1,10 +1,10 @@
-import { spawn } from "node:child_process";
 import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
 import { rm, stat } from "node:fs/promises";
 import { relative, sep } from "node:path";
 import { setTimeout as sleep } from "node:timers/promises";
 import { z } from "zod";
+import { spawn } from "./child-process.js";
 import { cogitIgnored, findGitRoot, gitUserEmail } from "./git.js";
 import { atomicWrite, atomicWriteJson, readJson } from "./store/fs.js";
 import { withLock } from "./store/lock.js";

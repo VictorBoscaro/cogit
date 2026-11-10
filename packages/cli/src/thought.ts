@@ -1,8 +1,8 @@
-import { execFile } from "node:child_process";
 import { access, realpath } from "node:fs/promises";
 import { isAbsolute, relative, resolve } from "node:path";
 import { promisify } from "node:util";
 import { type AgentAdapter, defaultAgent } from "./agents/index.js";
+import { execFile } from "./child-process.js";
 import { findGitRoot } from "./git.js";
 import { messageHash } from "./messages.js";
 import type { Session } from "./schema/session.js";

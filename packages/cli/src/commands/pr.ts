@@ -1,5 +1,5 @@
-import { execFile, spawn } from "node:child_process";
 import { promisify } from "node:util";
+import { execFile, spawn } from "../child-process.js";
 import { cogitIgnored, findGitRoot, gitUserEmail, readCommitFiles } from "../git.js";
 import { CliError, type Io } from "../io.js";
 import type { Session } from "../schema/session.js";

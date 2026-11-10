@@ -1,9 +1,9 @@
-import { execFile } from "node:child_process";
 import { mkdir } from "node:fs/promises";
 import { basename, resolve } from "node:path";
 import { promisify, styleText } from "node:util";
 import { defaultAgent } from "../agents/index.js";
 import { sessionIdentity } from "../author.js";
+import { execFile } from "../child-process.js";
 import {
   cogitIgnored,
   ensureCogitGitignore,

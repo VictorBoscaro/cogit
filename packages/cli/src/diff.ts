@@ -1,6 +1,6 @@
-import { execFile } from "node:child_process";
 import { relative, resolve, sep } from "node:path";
 import { promisify } from "node:util";
+import { execFile } from "./child-process.js";
 import { findGitRoot, projectFiles } from "./git.js";
 
 const exec = promisify(execFile);

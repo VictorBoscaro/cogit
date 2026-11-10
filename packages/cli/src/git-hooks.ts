@@ -1,8 +1,8 @@
-import { execFile } from "node:child_process";
 import { existsSync, realpathSync } from "node:fs";
 import { chmod, mkdir, readFile, realpath, rm, stat } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { promisify } from "node:util";
+import { execFile } from "./child-process.js";
 import { findGitRoot, gitHooksDir, resolveCommit } from "./git.js";
 import { spawnDetachedProcess } from "./hooks/run.js";
 import { pushIsDryRun } from "./push-command.js";

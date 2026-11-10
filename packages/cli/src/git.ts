@@ -1,7 +1,7 @@
-import { execFile, spawn } from "node:child_process";
 import { readFile, stat } from "node:fs/promises";
 import { dirname, isAbsolute, join, relative, sep } from "node:path";
 import { promisify } from "node:util";
+import { execFile, spawn } from "./child-process.js";
 import { atomicWrite } from "./store/fs.js";
 
 const exec = promisify(execFile);

@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The map's **Pull request** view asks for the branch again when you come back to the window, so a `git switch` in a terminal shows without reloading the page.
 - A Shape Flow whose node id is a word Mermaid reserves (`box`, `end`, `loop`…) drew as plain text in the map and broke its `mermaid` block in `cogit pr`; the diagram now uses its own ids.
 - The Pull request view's title, and the base in `cogit pr --json`, name the branch you track (`→ main`, `→ origin/main`, or the branch you stacked on) instead of `@{upstream}`.
+- On Windows, a console window no longer flashes on the screen at every prompt. The hooks run cogit in the background without a console, so each `git` or `claude` it started opened a window of its own; they now start hidden.
 
 ## [1.4.0] - 2026-11-10
 ### Added

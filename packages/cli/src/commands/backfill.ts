@@ -1,5 +1,5 @@
-import { spawn } from "node:child_process";
 import { type ChatTurn, defaultAgent } from "../agents/index.js";
+import { spawn } from "../child-process.js";
 import { CliError, type Io } from "../io.js";
 import { hashTurns, isRecorded, type SessionMessage, upgradeSessionIds } from "../messages.js";
 import { LineageNodeInput, type Session, Status } from "../schema/session.js";
